@@ -1,0 +1,36 @@
+   SYSTEM = ***
+
+   #### Startparameter for this run:
+   PREC   = Normal # Accurate
+   ISTART = 0            # job: 0-new  1-cont  2-samecut
+   ISPIN  = 2            # spin polarized calculation
+
+   ####  Electronic Relaxation:
+   EDIFF =  1E-05        # stopping-criterion for ELM
+   ENCUT  = 400          # energy cut-off
+   LREAL  = Auto         # real-space projection
+   VOSKOWN= 1            # for GGA interpolation
+
+   ####  Ionic relaxation:
+   EDIFFG = -0.02        # stopping-criterion for IOM
+   IBRION = 2            #ionic relax: 0-MD 1-quasi-New 2-CG
+   ISIF   = 2            # ion relaxation only
+   POTIM  = 0.05
+   NSW    = 400          # allowed number of ionic steps
+#  ISYM=0                # switch off symmetry for accurate calculations.
+
+   ####  DOS related values:
+   SIGMA = 0.1
+   ISMEAR = 0            # tetrahedron method with bloechel corresctions,used for atom and molecule box calculation.
+
+#   IDIPOL=3
+#   LDIPOL= .T.
+   #### Dipole corrections :
+   LWAVE = .F.
+   LCHARG = .F.
+#   NPAR=4
+NCORE=12
+
+GGA = OR
+LUSE_VDW = .TRUE.
+AGGAC = 0.0000
